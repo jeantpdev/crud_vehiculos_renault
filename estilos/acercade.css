@@ -1,0 +1,395 @@
+@import url(global.css);
+
+.principal {
+    display: grid;
+}
+
+.contenido {
+    display: grid;
+    grid-template-areas: "izquierda derecha";
+    grid-template-columns: 8vw 90vw;
+}
+
+/* Inicio contenido izquierda */
+
+.contenido-izquierda {
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 1.6vw;
+    position: fixed;
+    grid-area: izquierda;
+    justify-content: center;
+}
+
+/* MENU */
+
+.menu {
+    background-color: #131417;
+    height: 95vh;
+    border-radius: 0.5vw;
+    display: flex;
+    width: 5vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconos {
+    display: grid;
+}
+
+.icono-menu,
+.icono-menu-2,
+.icono-menu-3,
+.icono-menu-4 {
+    margin: 2vh auto;
+}
+
+.icono-menu-5 {
+    margin-top: 48vh;
+}
+
+
+.fa-solid {
+    cursor: pointer;
+    color: white;
+}
+
+.fa-solid:hover {
+    color: #d5d3d7;
+}
+
+/* FIN MENU*/
+
+/* Inicio contenido izquierda */
+
+
+.contenido-derecha {
+    display: grid;
+    grid-area: derecha;
+    grid-template-areas:
+        "acercade"
+        "desarrolladores"
+        "footer";
+    border-radius: 0.5vw;
+    grid-template-rows: 1fr 1fr 10vh;
+}
+
+.contenido-grid {
+    grid-area: acercade;
+    display: grid;
+    grid-template-areas:
+        "titulo imagen"
+        "parrafo imagen"
+        "manuale imagen";
+    align-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 5vw;
+}
+
+.contenido-titulo {
+    display: grid;
+    grid-area: titulo;
+}
+
+.contenido-descripcion {
+    grid-area: parrafo;
+    width: 50vw;
+}
+
+.contenido-boton {
+    grid-area: manuale;
+}
+
+.contenido-imagen {
+    grid-area: imagen;
+    display: grid;
+    justify-items: center;
+}
+
+.contenido-integrantes {
+    grid-area: integrantes;
+}
+
+.contenido__titulo {
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.contenido__descripcion {
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+.contenido__imagen {
+    height: 45vh;
+    width: auto;
+}
+
+.boton {
+    padding: 2vh 3vw;
+    background-color: #131417;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(199, 198, 198);
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    font-size: 1.2vw;
+}
+
+.boton:hover {
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #131417;
+}
+
+/* Inicio sección integrantes del grupo */
+
+.contenido-integrantes {
+    grid-area: desarrolladores;
+}
+
+.integrantes {
+    display: grid;
+    grid-template-areas:
+        "titulo titulo titulo titulo"
+        "tarjeta1 tarjeta2 tarjeta3 tarjeta4";
+
+    align-content: center;
+    justify-content: start;
+    margin: 0 5vw;
+}
+
+.tarjeta {
+    width: 20vw;
+}
+
+.integrantes-titulo {
+    text-align: start;
+    grid-area: titulo;
+}
+
+.desarrollador1 {
+    grid-area: tarjeta1;
+}
+
+.desarrollador2 {
+    grid-area: tarjeta2;
+}
+
+.desarrollador3 {
+    grid-area: tarjeta3;
+}
+
+.desarrollador4 {
+    grid-area: tarjeta4;
+}
+
+.tarjeta-imagen {
+    display: grid;
+}
+
+.integrantes__titulo {
+    font-size: 4vw;
+}
+
+.tarjeta__titulo {
+    font-size: 1.5vw;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.footer-container {
+    display: block;
+    padding: 10px 30px;
+    background-color: #1d1d1d;
+}
+
+.footer-content {
+    margin: 0 auto;
+
+}
+
+.footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.footer-referencia,
+.footer-siguenos,
+.footer-juegos {
+    margin-right: 80px;
+}
+
+.footer-title {
+    font-size: 11pt;
+    font-weight: 700;
+    line-height: 1.4;
+    color: white;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.footer-list__item {
+    font-size: 10pt;
+    display: inline-block;
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: all;
+    transition: all 0.15s ease-in-out;
+    margin: 10px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.footer__riot-logo {
+    display: block;
+    width: 110px;
+    height: 40px;
+}
+
+.footer-text {
+    max-width: 600px;
+}
+
+.footer__copyright {
+    display: inline-block;
+    color: #aaaaaa;
+    font-size: 11pt;
+    line-height: 1.4;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .contenido {
+        display: grid;
+        grid-template-areas:
+            "menuxd"
+            "contenido"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .contenido-izquierda {
+        grid-area: menuxd;
+        margin: 0;
+        position: static;
+    }
+
+    .contenido-derecha {
+        grid-area: contenido;
+    }
+
+
+    .menu {
+        background-color: #131417;
+        border-radius: 1vw;
+        display: flex;
+        align-items: center;
+        height: 8vh;
+        width: 95vw;
+    }
+
+    .iconos {
+        width: 90vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icono-menu,
+    .icono-menu-2,
+    .icono-menu-3,
+    .icono-menu-4 {
+        margin: 0;
+        padding: 12px;
+
+    }
+
+    .icono-menu-5 {
+        margin-top: 0vh;
+        padding: 0;
+    }
+
+    .contenido__imagen {
+        height: 20vh;
+        width: auto;
+    }
+
+    .contenido-grid {
+        grid-area: acercade;
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "parrafo"
+            "imagen"
+            "manuale";
+        align-items: center;
+        grid-template-rows: auto 1fr 1fr;
+        margin: 0 5vw;
+    }
+
+    .contenido__titulo {
+        font-size: 10vw;
+        font-weight: bold;
+    }
+
+    .contenido-descripcion {
+        width: auto;
+    }
+
+    .contenido__descripcion {
+        font-size: 4vw;
+        text-align: justify;
+    }
+
+    .contenido-boton {
+        text-align: center;
+    }
+
+    .boton {
+        font-size: 4vw;
+    }
+
+    .integrantes {
+        display: grid;
+        grid-template-areas:
+            "titulo "
+            "tarjeta1" 
+            "tarjeta2" 
+            "tarjeta3" 
+            "tarjeta4";
+        align-content: center;
+        justify-content: start;
+        margin: 0 5vw;
+    }
+    
+    .tarjeta {
+        width: 80vw;
+    }
+    
+    .integrantes-titulo {
+        text-align: start;
+        grid-area: titulo;
+    }
+
+    .integrantes__titulo {
+        font-size: 8vw;
+    }
+    
+    .tarjeta__titulo {
+        font-size: 5vw;
+    }
+}

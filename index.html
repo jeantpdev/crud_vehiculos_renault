@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Metas necesarios -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- Estilos Bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<!-- Estilos propios -->
+	<link rel="stylesheet" href="estilos/principal.css">
+
+	<title>Document</title>
+</head>
+
+<body>
+
+	<!--Menu - navbar -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" href="#"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</nav>
+	</header>
+
+	<!-- pantalla principal -->
+	<section id="principal">
+		<div class="contenedor">
+			<div class="contenido">
+				<div class="principal-imagen">
+					<img src="imagenes/register.svg" class="principal__imagen">
+				</div>
+				<div class="principal-contenido">
+					<div class="principal-titulo">
+						<h1 class="principal__h1">Iniciar Sesión</h1>
+					</div>
+
+					<div class="principal-entrada-correo">
+						<input type="email" id="correo_iniciar_sesion" placeholder="usuario"
+							class="form-control">
+
+					</div>
+
+					<div class="principal-entrada-contra">
+						<input type="password" id="contrasena_iniciar_sesion" placeholder="contraseña"
+							class="form-control">
+					</div>
+					<!--
+					<div id="contenido">
+
+					</div>
+					PROBLEMAS EN MODO RESPONSIVE-->
+
+					<div class="principal-boton">
+						<!--Boton con función de ingresar al usuario -->
+						<button id="iniciarSesion" class="btn btn-light">Iniciar Sesión</button>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<div><svg class="ola" viewBox="0 0 500 150" preserveAspectRatio="none">
+				<path d="M-3.67,21.20 C149.99,150.00 359.76,-67.59 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+					style="stroke: none; fill: #ffffff;"></path>
+			</svg></div>
+
+		<!-- <img src="img/wave1.png" class="ola"> -->
+	</section>
+
+	<!-- Scripts propios -->
+	<script type="text/javascript" src="javascript/valid-sesion.js" async></script>
+	<!-- Scripts externos -->
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

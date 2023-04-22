@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(normalice.css);
+
+*{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    text-decoration: none;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    cursor: pointer;
+}

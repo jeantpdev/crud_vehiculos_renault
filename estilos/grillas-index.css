@@ -1,0 +1,102 @@
+@import url(normalize.css);
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.pagina__contenedor {
+    display: grid;
+    grid-template-areas:
+        "inicio"
+        "documentacion"
+        "interes"
+        "servicios";
+    grid-template-rows:auto;
+    grid-template-columns: 1fr;
+}
+
+.pagina__inicio {
+    grid-area: inicio;
+    height: 80vh;
+    display: grid;
+    background-color: #131417;
+    justify-items: stretch;
+    align-items: center;
+    align-content: center;
+}
+
+.pagina__documentacion {
+    grid-area: documentacion;
+}
+
+.pagina__interes {
+    grid-area: interes;
+}
+
+.pagina__servicios {
+    grid-area: servicios;
+}
+
+.inicio__contenido {
+    display: grid;
+    grid-template-areas:
+    "titulo imagen"
+    "subtitulo boton";
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inicio-titulo{
+    grid-area: titulo;
+}
+
+.inicio-parrafo{
+    grid-area: subtitulo;
+}
+
+.inicio-boton{
+    grid-area: boton;
+}
+
+.inicio-imagen{
+    grid-area: imagen;
+}
+
+.menu-principal__contenido {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: 11vh;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+    .menu-principal__contenido {
+        background-color: #131417;
+        align-items: center;
+        height: 10vh;
+        display: flex;
+        justify-content: end;
+        padding: 0px 40px 0px 40px;
+    }
+
+    .menu-principal__item{
+        color: white;
+    }
+
+
+
+
+
+
+
+
+}

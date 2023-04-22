@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos-->
+    <link rel="stylesheet" href="../estilos/operaciones.css">
+    <link rel="shortcut icon" href="../imagenes/renault.png" type="image/x-icon">
+    <title>CRUD</title>
+</head>
+
+<body>
+
+    <main class="principal">
+        <section class="principal-contenido">
+
+            <div class="contenido-izquierda">
+                <nav class="menu">
+                    <div class="iconos">
+
+                        <div class="icono icono-menu">
+                            <a href="inicio.html"><i class="fa-solid fa-house fa-2x"></i></a>
+                        </div>
+
+                        <div class="icono icono-menu-2">
+                            <a href="operaciones.html"><i class="fa-solid fa-table fa-2x"></i></a>
+                        </div>
+
+                        <div class="icono icono-menu-3">
+                            <a href="graficas.html"><i class="fa-solid fa-chart-simple fa-2x"></i></a>
+                        </div>
+
+                        <div class="icono icono-menu-4">
+                            <a href="acercade.html"><i class="fa-solid fa-info fa-2x"></i></a> 
+                        </div>
+
+                        <div class="icono icono-menu-5">
+                            <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="contenido-derecha">
+                <div class="derecha-grid">
+
+                    <div class="botones-contenido-derecha">
+                        <div class="boton-grid">
+                            <div class="boton">
+                                <button id="btnAbrirModalInsertar" class="boton-1">Insertar datos</button>
+                            </div>
+                        </div>
+
+                        <div class="boton-grid">
+                            <div class="boton">
+                                <button id="btnAbrirModalModificar" class="boton-1">Modificar</button>
+                            </div>
+                        </div>
+
+                        <div class="boton-grid">
+                            <div class="boton">
+                                <button id="btnAbrirModalConsultar" class="boton-1">Consultar</button>
+                            </div>
+                        </div>
+
+                        <div class="boton-grid">
+                            <div class="boton">
+                                <button id="btnAbrirModalEliminar" class="boton-1">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-tabla-principal">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Modelo</th>
+                                    <th>Año</th>
+                                    <th>Kilometraje</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-principal-cuerpo">
+                            </tbody> 
+                        </table>
+                    </div>
+
+                    <div id="targetModalInsertar" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-contenido">
+                            <div class="modal-cabecera">
+                                <span class="btn-cerrar-modal cerrar-modal-insertar">&times;</span>
+                                <h2 class="modal__titulo">Insertar datos</h2>
+                                <p class="modal__descripcion">Esta sección incluye campos para ingresar el modelo del vehículo, el año de fabricación, el precio de venta y el kilometraje actual. Los usuarios pueden completar estos campos con la información correcta y enviar el formulario para que los datos se almacenen en una base de datos. </p>
+                            </div>
+
+                            <div class="modal-cuerpo">
+
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Modelo</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <select id="campo-modelo__combobox" class="combobox">
+                                            <option>ALASKAN</option>
+                                            <option>KWID</option>
+                                            <option>LOGAN</option>
+                                            <option>SANDERO</option>
+                                          <option>SOUL</option>
+                                            <option>STEPWAY</option>
+                                        </select>
+                                    </div>
+                                </div>  
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Año</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <select id="campo-year__combobox" class="combobox">
+                                            <option>2015</option>
+                                            <option>2016</option>
+                                            <option>2017</option>
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Kilometraje</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <input type="text" id="kilometraje" name="name" minlength="5" maxlength="15">
+                                    </div>
+                                </div>
+
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Precio</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <input type="text" id="precio" name="name" minlength="5" maxlength="15">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-pie">
+                                <button id="btnInsertarDatosModal">Insertar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="targetModalModificar" class="modal modal-modificar">
+                        <!-- Modal content -->
+                        <div class="modal-contenido">
+                            <div class="modal-cabecera">
+                                <span class="btn-cerrar-modal cerrar-modal-modificar">&times;</span>
+                                <h2 class="modal__titulo">Modificar datos</h2>
+                                <p class="modal__descripcion">
+                                    Aquí podemos modificar los datos que tenemos alojados en nuestra 
+                                    base de datos, lo que nos permitira corregir algun error que 
+                                    tengamos y además de una forma rápida y sencilla.
+                                </p>
+                            </div>
+
+                            <div class="modal-cuerpo">
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Id</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <input type="text" id="modificar-id" name="name" minlength="5" maxlength="15">
+                                    </div>
+
+                                </div>
+
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Modelo</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <input type="text" id="modificarModelo" name="name" minlength="5" maxlength="15" disabled>
+
+                                    </div>
+                                </div>
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Año</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <input type="text" id="modificarAño" name="name" minlength="5" maxlength="15" disabled>
+
+                                    </div>
+                                </div>
+
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Precio</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <input type="text" id="modificar-precio" name="name" minlength="5" maxlength="15" disabled>
+                                    </div>
+                                </div>
+
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Kilometraje</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <input type="text" id="modificar-kilometraje" name="name" minlength="5" maxlength="15" disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-pie">
+                                <button id="btnBuscarModificarDatosModal">Buscar</button>
+                                <button id="btnModificarDatosModal" disabled>Insertar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="targetModalEliminar" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-contenido">
+                            <div class="modal-cabecera">
+                                <span class="btn-cerrar-modal cerrar-modal-eliminar">&times;</span>
+                                <h2 class="modal__titulo">Eliminar datos</h2>
+                                <p class="modal__descripcion">
+                                    Se llamara el campo que se desea eliminar para posteriormente 
+                                    hacerlo, lo podremos llamar colocando el numero de identificación (ID).
+                                </p>
+                            </div>
+
+                            <div class="modal-cuerpo">
+                                <div class="campo">
+                                    <div class="campo__titulo">
+                                        <label for="name">Id</label>
+                                    </div>
+                                    <div class="campo__texto">
+                                        <input type="text" id="eliminar-id" name="name" minlength="5" maxlength="15">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-pie">
+                                <button id="btnEliminarDatosModal">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="targetModalConsultar" class="modal modal-consultar">
+                        <!-- Modal content -->
+                        <div class="modal-contenido">
+                            <div class="modal-cabecera">
+                                <span class="btn-cerrar-modal cerrar-modal-consultar">&times;</span>
+                                <h2 class="modal__titulo">Consultar datos</h2>
+                                <p class="modal__descripcion">
+                                    Podremos buscar un dato que sea requerido y que deseemos saber
+                                    su información, esto se podra hacer escribiendo su ID.
+                                </p>
+                            </div>
+
+                            <div class="modal-cuerpo">
+                                <div class="campo">
+                                    <div class="campo-id">
+                                        <div class="campo__label">
+                                            <label for="name">Ingresa el id del vehiculo a buscar  </label>
+                                        </div>
+                                        <div class="campo__input">
+                                            <input type="text" id="modalConsultarCampoId" name="name" minlength="5" maxlength="15">
+                                        </div>
+                                        <div class="campo__botones">
+                                            <i id = "boton-consultar-registro" class="fa-solid fa-magnifying-glass fa-2x"></i>
+                                            <i id = "btnLimpiarCampoId" class="fa-solid fa-broom fa-2x eliminar"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="campo-resultados">
+                                        <div class="tabla-resultados-datos-vehiculo">
+                                            <table>
+                                                <thead>
+                                                    <th>Id</th>
+                                                    <th>Modelo</th>
+                                                    <th>Año</th>
+                                                    <th>Kilometraje</th>
+                                                    <th>Precio</th>
+                                                </thead>
+                                                <tbody id="tablaCuerpoResultadosDatosVehiculo">
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
+    <script src="../javascript/operaciones-js.js"></script>
+</body>
+
+</html>

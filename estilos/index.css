@@ -1,0 +1,168 @@
+@import url(normalice.css);
+@import url(global.css);
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&display=swap');
+
+* {
+    font-family: 'Heebo', sans-serif;
+    color: #252830;
+}
+
+ul {
+    list-style: none;
+}
+
+.principal {
+    height: 100vh;
+    display: grid;
+}
+
+.contenido {
+    display: grid;
+    grid-template-areas: "izquierda derecha";
+    grid-template-columns: 8vw 90vw;
+}
+
+.contenido-izquierda {
+    display: flex;
+    margin: auto 0;
+    grid-area: izquierda;
+    justify-content: center;
+}
+
+/* MENU */
+
+
+.menu {
+    background-color: #131417;
+    height: 95vh;
+    border-radius: 0.5vw;
+    display: flex;
+    width: 5vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconos {
+    display: grid;
+}
+
+.icono-menu,
+.icono-menu-2,
+.icono-menu-3,
+.icono-menu-4 {
+
+    margin: 2vh auto;
+}   
+
+.icono-menu-5{
+    margin-top: 48vh;
+  }
+  
+
+
+.fa-solid {
+    cursor: pointer;
+    color: white;
+}
+
+.fa-solid:hover {
+    color: #d5d3d7;
+}
+
+/* FIN MENU*/
+
+.contenido-derecha {
+    display: grid;
+    grid-area: derecha;
+    align-items: center;
+    background-color: #131417;
+    margin: auto 0;
+    height: 95vh;
+    border-radius: 0.5vw;
+}
+
+.derecha-grid {
+    display: grid;
+    margin: 0 auto;
+}
+
+
+/* Seccion inicio */
+
+.inicio-contenido {
+    display: grid;
+    grid-template-areas:
+        "titulo imagen"
+        "parrafo imagen"
+        "boton imagen";
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.inicio-titulo{
+    grid-area: titulo;
+}
+.inicio-parrafo{
+    grid-area: parrafo;
+}
+
+.inicio-imagen{
+    grid-area: imagen;
+}
+
+.inicio-boton{
+    grid-area: boton;
+}
+
+.inicio__titulo {
+    font-size: 4vw;
+    color: aliceblue;
+}
+
+.inicio__subtitulo {
+    font-size: 1.9vw;
+    color: rgb(230, 230, 230);
+    font-weight: 300;
+}
+
+.color-amarillo {
+    color: rgb(255, 217, 0);
+}
+
+strong{
+    color: white;
+}
+
+.inicio__parrafo {
+    font-size: 1.3vw;
+    color: rgb(182, 182, 182);
+    font-weight: 300;
+    padding: 0px 0px 2vw 0px;
+}
+
+.inicio-boton {
+    border-radius: 0.2vw;
+    cursor: pointer;
+    color: #131417;
+    text-decoration: none;
+    padding: 1vw 1vw;
+    letter-spacing: 2px;
+    font-weight: 400;
+    background-color: #efe9f4;
+}
+
+.inicio__link {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.inicio__imagen {
+    text-align: center;
+    height: 30vh;
+    width: auto;
+}
+
+/* Seccion inicio FIN */

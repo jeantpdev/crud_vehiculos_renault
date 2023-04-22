@@ -1,0 +1,371 @@
+@import url(global.css);
+
+button {
+  width: 10vw;
+  height: 5vh;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: #191919;
+  color: #ffff;
+  font-size: 2vh;
+  font-weight: 300;
+  border-radius: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #191919;
+  color: rgb(233, 233, 233);
+}
+
+td {
+  text-align: center;
+  padding: 2vw;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 1.3vw;
+}
+
+.principal {
+  /* Se le aplica un heigth que ocupe el 100% de la pantalla para poder posicionar el menu*/
+  height: 100vh;
+  display: grid;
+}
+
+.principal-contenido {
+  display: grid;
+  grid-template-areas: "izquierda derecha";
+  grid-template-columns: 8vw 90vw;
+}
+
+.contenido-izquierda {
+  display: flex;
+  margin: auto 0;
+  /* Menu centrado verticalmente según el espacio que tiene en la grid*/
+  grid-area: izquierda;
+  justify-content: center;
+  /* Se central horizontalmente */
+}
+
+/* MENU */
+.menu {
+  background-color: #131417;
+  height: 95vh;
+  border-radius: 0.5vw;
+  display: flex;
+  width: 5vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconos {
+  display: grid;
+}
+
+.icono-menu,
+.icono-menu-2,
+.icono-menu-3,
+.icono-menu-4 {
+  margin: 2vh auto;
+}
+
+.icono-menu-5 {
+  margin-top: 48vh;
+}
+
+.fa-solid {
+  color: white;
+}
+
+.fa-solid:hover {
+  color: #d5d3d7;
+}
+
+/* FIN MENU*/
+
+.contenido-derecha {
+  display: grid;
+  grid-area: derecha;
+  align-items: center;
+}
+
+.derecha-grid {
+  display: grid;
+  grid-template-areas:
+    "tabla"
+    "botones";
+  grid-template-rows: 80vh 5vh;
+  grid-template-columns: 90vw;
+  row-gap: 3vh;
+  margin: 0 auto;
+}
+
+.botones-contenido-derecha {
+  display: flex;
+  grid-area: botones;
+  justify-content: end;
+  column-gap: 2vw;
+}
+
+.contenedor-tabla-principal {
+  grid-area: tabla;
+  display: grid;
+  overflow-x: auto;
+  border: 1px solid #eeeeee;
+  border-radius: 1vw;
+}
+
+.boton-grid {
+  display: flex;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  /* POr defecto no se muestran en pantalla hasta que se abran */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-modificar .modal-contenido {
+  height: 80vh;
+}
+
+.modal-modificar .modal-cuerpo {
+  display: flex;
+  column-gap: 2vw;
+  margin-left: 5vw;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.modal-contenido {
+  display: grid;
+  height: 75vh;
+  background-color: #fefefe;
+  margin: 2% auto;
+  padding: 20px;
+  width: 50%;
+  border-radius: 0.4vw;
+}
+
+.modal-consultar .modal-cuerpo .campo .campo-id {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.campo__botones .fa-solid {
+  color: #131417;
+}
+
+.modal-cabecera {
+  text-align: center;
+}
+
+.modal__titulo {
+  font-size: 5vh;
+}
+
+.modal__descripcion {
+  color: #4e4e4e;
+  font-size: 1.2vw;
+  padding: 0 2vw;
+}
+
+.combobox {
+  width: 20vw;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.modal-cuerpo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+/* The Close Button */
+.btn-cerrar-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.btn-cerrar-modal:hover,
+.btn-cerrar-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=text] {
+  width: 20vw;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.modal-pie {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.modal-pie button {
+  margin-right: 3.1vw;
+}
+
+.tabla-resultados-datos-vehiculo {
+  height: 20vh;
+  width: 50vw;
+  border: 1px solid #eeeeee;
+  border-radius: 1vw;
+}
+
+.campo-id input[type=text] {
+  width: 10vw;
+  height: 5vh;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .principal-contenido {
+    grid-template-areas:
+      "izquierda"
+      "derecha";
+    grid-template-rows: 5vh 95vh;
+    grid-template-columns: 95vw;
+    margin: 0 auto;
+  }
+
+  .contenido-izquierda {
+    margin: 0;
+    justify-content: start;
+  }
+
+  .menu {
+    background-color: #131417;
+    border-radius: 1vw;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    width: 100vw;
+  }
+
+  .iconos {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icono-menu,
+  .icono-menu-2,
+  .icono-menu-3,
+  .icono-menu-4,
+  .icono-menu-5 {
+    margin: 0;
+    padding: 12px;
+
+  }
+
+  .icono-menu-5 {
+    margin-top: 0vh;
+  }
+
+  .derecha-grid {
+    display: grid;
+    grid-template-areas:
+      "tabla"
+      "botones";
+    grid-template-rows: 80vh 5vh;
+    grid-template-columns: 95vw;
+    row-gap: 3vh;
+    margin: 0;
+  }
+
+  .botones-contenido-derecha {
+    justify-content: center;
+    column-gap: 2vw;
+  }
+
+  .boton-1 {
+    width: 20vw;
+  }
+
+  .modal{
+    overflow: auto;
+  }
+
+  .modal-contenido {
+    display: grid;
+    height: auto;
+    margin: 10% auto;
+    width: 80vw;
+    border-radius: 0.4vw;
+  }
+
+  .modal-cuerpo{
+    padding-bottom: 5vw;
+  }
+  .combobox {
+    width: 70vw;
+  }
+
+
+  input[type=text] {
+    width: 70vw;
+    padding: 12px 20px;
+    margin: 8px 0;
+  }
+
+  .campo__input input[type=text]{
+    width: 20vw;
+  }
+
+  .modal__descripcion{
+    font-size: 4vw;
+  }
+
+  td {
+    font-size: 3.2vw;
+  }
+
+  button{
+    width: 30vw;
+  }
+
+  .modal-modificar .modal-contenido {
+    height: auto;
+  }
+
+  .tabla-resultados-datos-vehiculo {
+    height: 20vh;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    border-radius: 1vw;
+  }
+
+}

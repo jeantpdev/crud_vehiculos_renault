@@ -1,0 +1,155 @@
+*{
+	margin: 0;
+	padding: 0;
+	color:white;
+}
+
+body{
+	background-color: #16161D;
+}
+
+.contenedor{
+	height: 70vh;
+	display: grid;
+    align-items: center;
+}
+
+h1{
+	text-transform: uppercase;
+	font-size: 8vh;
+}
+
+nav{
+	height: 10vh;
+}
+
+.ola{
+	height: 20vh;
+	width: 100%;
+	top:0;
+}
+
+/* HEADER */
+
+.navbar-brand{
+	color: white !important;
+	font-size: 5vh;
+}
+
+.navbar li a{
+	color:white !important;
+	font-size: 5vh;
+	float: right;
+}
+
+/* SECCION PRINCIPAL */ 
+
+.modal-h1{
+	color:black;
+	text-align: center;
+}
+
+.modal-p{
+	color:black;
+	text-align: center;
+	font-size: 20px;
+}
+
+.contenido{
+	display: grid;
+	grid-template-areas:
+	"imagen contenido";
+	grid-template-columns: 40vw 40vw;
+	justify-content: center;
+}
+
+.principal-imagen{
+	display: grid;
+	grid-area: imagen;
+	align-items: end;
+}
+
+.principal-contenido{
+	grid-area: contenido;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	grid-template-areas: 
+	"titulo"
+	"correo"
+	"contra"
+	"texto"
+	"boton";
+}
+
+.principal-titulo{
+	grid-area: titulo;
+}
+
+.principal-entrada-correo{
+	grid-area: correo;
+}
+
+.principal-entrada-contra{
+	grid-area: contra;
+}
+
+.principal-texto{
+	grid-area: texto;
+}
+
+.principal-boton{
+	grid-area: boton;
+}
+
+.principal-contenido input{
+	height: 6vh;
+	width: 40vw;
+	font-size: 1vw;
+}
+
+.principal-contenido button{
+	width: 17vw;
+}
+
+.principal-boton .btn-light{
+	font-size: 3vh;
+}
+
+.principal__imagen{
+	height: 55vh;
+	width: auto;
+}
+
+.principal__h1{
+	font-weight: bold;
+	color: #FFFF;
+}
+
+.principal__texto{
+	font-size: 3vh;
+}
+.principal__texto span{
+	color:lightblue;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	#principal{
+		height: 120%;
+	}
+
+	.principal-h1{
+		margin-top: 50px;
+	}
+
+	.principal-imagen{
+		height: 30vh;
+		margin-top: 0px;
+		margin-right: 0px;
+	}
+
+	
+  }

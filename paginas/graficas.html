@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos-->
+    <link rel="stylesheet" href="../estilos/graficas.css">
+    <link rel="shortcut icon" href="../imagenes/renault.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main class="principal">
+        <section class="contenido">
+            <div class="contenido-izquierda">
+                <nav class="menu">
+                    <div class="iconos">
+
+                        <div class="icono-menu">
+                            <a href="inicio.html"><i class="fa-solid fa-house fa-2x"></i></a>
+                        </div>
+
+                        <div class="icono-menu-2">
+                            <a href="operaciones.html"><i class="fa-solid fa-table fa-2x"></i></a>
+                        </div>
+
+                        <div class="icono-menu-3">
+                            <a href="graficas.html"><i class="fa-solid fa-chart-simple fa-2x"></i></a>
+                        </div>
+
+                        <div class="icono-menu-4">
+                            <a href="acercade.html"><i class="fa-solid fa-info fa-2x"></i></a>
+                        </div>
+
+                        <div class="icono-menu-5">
+                            <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="contenido-derecha">
+                <div class="tarjetas">
+                    <div class="tarjeta tarjeta1">
+                        <div class="card-content">
+                            <div class="numero">334</div>
+                            <div class="nombre-tarjeta">Auto móviles</div>
+                        </div>
+
+                        <div class="icon-box">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="tarjeta tarjeta2">
+                        <div class="card-content">
+                            <div class="numero">6</div>
+                            <div class="nombre-tarjeta">Marcas</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta tarjeta3">
+                        <div class="card-content">
+                            <div class="numero">15</div>
+                            <div class="nombre-tarjeta">Años</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                    </div>
+                    <div class="tarjeta tarjeta4">
+                        <div class="card-content">
+                            <div class="numero">Km</div>
+                            <div class="nombre-tarjeta">Autonomia</div>
+
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-wrench icono-card"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts">
+                    <div class="graficas">
+                        <div class="chart">
+                            <h2 class="chart__titulo">Cantidad de automóviles</h2>
+                            <canvas id="myChart"></canvas>
+                            <p class="parrafo">En este grafico de lineas podemos observar la cantidad
+                                de automóviles de la marca <b>Renault</b> que se encuentran
+                                en la base de datos.
+                            </p>
+                        </div>
+
+                        <div class="chart">
+                            <h2 class="chart__titulo">Modelos por año</h2>
+                            <canvas id="myChart2"></canvas>
+                            <p class="parrafo">
+                                Con este grafico de barras podemos observar la cantidad
+                                de modelos de la marca <b>Renault</b> que son vendidos en la pagina de
+                                <b>OLX</b> y el año de los modelos correspondiente.
+
+                            </p>
+                        </div>
+                        <div class="graficos">
+                        <div class="chart">
+                            <h2 class="chart__titulo">Precio vs kilometraje</h2>
+                            <canvas id="myChart3"></canvas>
+                            <p class="parrafo">
+                                Con este grafico de puntos dispersos queremos mostrar
+                                la comparativa de como varia el precio de un
+                                automovil con respecto al kilometraje que este haya tenido
+                                a lo largo de su vida util.
+                            </p>
+                        </div>
+
+                        <div class="charti">
+                            <h2 class="chart__titulo">Gráfico de tortas</h2>
+                            <canvas id="myChart4" class="torta"></canvas>
+                            <p class="parrafo">
+                                En este grafico de lineas podemos observar la cantidad de automóviles de la marca
+                                Renault que se encuentran en la base de datos.
+
+                            </p>
+                        </div>
+                        </div>
+                        <div class="grafo">
+                        <div class="chart">
+                            <h2 class="chart__titulo">Barra flotantes</h2>
+                            <canvas id="myChart5"></canvas>
+                            <p class="parrafo">
+                                Con este grafico queremos mostrar
+                                la comparativa de como varia el precio de un
+                                automovil con respecto al kilometraje que este haya tenido
+                                a lo largo de su vida util.
+
+                            </p>
+                        </div >
+                        
+                        <div class="charti">
+                            <h2 class="chart__titulo">Gráfico de tortas</h2>
+                            <canvas  class="torta"id="myChart6" ></canvas>
+                            <p class="parrafo">
+                                En este grafico de lineas podemos observar la cantidad de automóviles de la marca
+                                Renault que se encuentran en la base de datos.
+
+                            </p>
+                        
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
+    <script src="../javascript/graficas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+</body>
+
+</html>

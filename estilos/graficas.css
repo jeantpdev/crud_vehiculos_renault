@@ -1,0 +1,300 @@
+@import url(global.css);
+
+
+.principal {
+  height: 100vh;
+  display: grid;
+}
+
+.contenido {
+  display: grid;
+  grid-template-areas: "izquierda derecha";
+  grid-template-columns: 8vw 90vw;
+}
+
+.contenido-izquierda {
+  display: flex;
+  margin: auto 0;
+  margin-left: 10px;
+  margin-top: 7px;
+  position: fixed;
+  grid-area: izquierda;
+  justify-content: center;
+}
+
+/* MENU */
+.menu {
+  background-color: #131417;
+  height: 95vh;
+  border-radius: 0.5vw;
+  display: flex;
+  width: 5vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconos {
+  display: grid;
+}
+
+.icono-menu,
+.icono-menu-2,
+.icono-menu-3,
+.icono-menu-4 {
+
+  margin: 2vh auto;
+}
+
+.icono-menu-5 {
+  margin-top: 48vh;
+}
+
+.iconos .fa-solid {
+  cursor: pointer;
+  color: white;
+}
+
+.iconos .fa-solid:hover {
+  color: #d5d3d7;
+}
+
+/* FIN MENU*/
+
+.contenido-derecha {
+  display: grid;
+  grid-area: derecha;
+  height: 95vh;
+  border-radius: 0.5vw;
+  row-gap: 2vw;
+}
+
+.tarjetas {
+  display: grid;
+  padding: 10px 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.tarjetas .tarjeta {
+  padding: 1.2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 0.5vw;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+}
+
+.numero {
+  font-size: 2vw;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.nombre-tarjeta {
+  color: #00000088;
+  font-weight: 600;
+  font-size: 1vw;
+}
+
+.icon-box i {
+  font-size: 3vw;
+  color: #030303
+}
+
+.charts {
+  display: flex;
+}
+
+.chart {
+  padding: 1.5vw;
+  border-radius: 0.5vw;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+  width: 40vw;
+  height: 70vh;
+}
+
+.charti {
+  padding: 1.5vw;
+  border-radius: 0.5vw;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+  /*El de las tortas*/
+  width: 40vw;
+  height: 70vh;
+
+}
+
+.chart__titulo {
+  font-size: 1.8vw;
+}
+
+.parrafo {
+  text-align: justify;
+  margin: 20px;
+}
+
+.graficas {
+  display: flex;
+  gap: 4vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* RESPONSIVE*/
+@media only screen and (max-width: 600px) {
+
+  .contenido {
+    display: grid;
+    grid-template-areas:
+      "navegacion"
+      "contenido";
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  .contenido-izquierda {
+    grid-area: navegacion;
+    position: static;
+    margin: 0;
+  }
+
+  .contenido-derecha {
+    display: grid;
+    grid-area: contenido;
+    grid-template-areas: 
+    "tarjetasxd"
+    "graficos";
+  }
+
+  .tarjetas{
+    grid-area: tarjetasxd;
+  }
+
+  .charts{
+    grid-area: graficos;
+  }
+
+
+  .menu {
+    background-color: #131417;
+    border-radius: 1vw;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    width: 100vw;
+  }
+
+  .iconos {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icono-menu,
+  .icono-menu-2,
+  .icono-menu-3,
+  .icono-menu-4 {
+    margin: 0;
+    padding: 12px;
+
+  }
+
+  .icono-menu-5 {
+    margin-top: 0vh;
+    padding: 12px;
+  }
+
+  .tarjetas {
+    display: grid;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4";
+    padding: 0;
+    grid-gap: 0;
+  }
+
+  .tarjeta1 {
+    grid-area: card1;
+  }
+
+  .tarjeta2 {
+    grid-area: card2;
+
+  }
+
+  .tarjeta3 {
+    grid-area: card3;
+
+  }
+
+  .tarjeta4 {
+    grid-area: card4;
+
+  }
+
+  .tarjeta {
+    display: grid;
+    grid-template-areas:
+      "contenido"
+      "icono";
+  }
+
+  .card-content {
+    grid-area: contenido;
+  }
+
+  .icon-box {
+    grid-area: icono;
+  }
+
+  .numero {
+    font-size: 10vw;
+  }
+
+  .icon-box {
+    font-size: 10vw;
+  }
+
+  .charts {
+    display: flex;
+  }
+  
+  .chart {
+    padding: 1.5vw;
+    border-radius: 0.5vw;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    width: 80vw;
+    height: auto;
+  }
+  
+  .charti {
+    padding: 1.5vw;
+    border-radius: 0.5vw;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    width: 80vw;
+    height: 70vh;
+  }
+  
+  .chart__titulo {
+    font-size: 1.8vw;
+  }
+  
+  .parrafo {
+    text-align: justify;
+    margin: 20px;
+  }
+  
+  .graficas {
+    display: flex;
+    gap: 4vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+
+
+}
