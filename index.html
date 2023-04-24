@@ -30,40 +30,29 @@
 	</header>
 
 	<!-- pantalla principal -->
-	<section id="principal">
+	<section id="pagina-principal">
 		<div class="contenedor">
-			<div class="contenido">
-				<div class="principal-imagen">
-					<img src="imagenes/register.svg" class="principal__imagen">
+			<div class="principal-imagen">
+				<img src="imagenes/register.svg" class="principal__imagen">
+			</div>
+			<div class="principal-formulario">
+				<div class="principal-titulo">
+					<h1 class="principal__titulo">Iniciar Sesión</h1>
 				</div>
-				<div class="principal-contenido">
-					<div class="principal-titulo">
-						<h1 class="principal__h1">Iniciar Sesión</h1>
-					</div>
 
-					<div class="principal-entrada-correo">
-						<input type="email" id="correo_iniciar_sesion" placeholder="usuario"
-							class="form-control">
-
-					</div>
-
-					<div class="principal-entrada-contra">
-						<input type="password" id="contrasena_iniciar_sesion" placeholder="contraseña"
-							class="form-control">
-					</div>
-					<!--
-					<div id="contenido">
-
-					</div>
-					PROBLEMAS EN MODO RESPONSIVE-->
-
-					<div class="principal-boton">
-						<!--Boton con función de ingresar al usuario -->
-						<button id="iniciarSesion" class="btn btn-light">Iniciar Sesión</button>
-					</div>
-
-
+				<div class="principal-correo">
+					<input type="email" id="correo_iniciar_sesion" placeholder="usuario" class="form-control">
 				</div>
+
+				<div class="principal-contra">
+					<input type="password" id="contrasena_iniciar_sesion" placeholder="contraseña" class="form-control">
+				</div>
+
+				<div class="principal-boton">
+					<button id="iniciarSesion" class="btn btn-light">Iniciar Sesión</button>
+				</div>
+
+
 			</div>
 		</div>
 		<div><svg class="ola" viewBox="0 0 500 150" preserveAspectRatio="none">
@@ -78,8 +67,12 @@
 	<script type="text/javascript" src="javascript/valid-sesion.js" async></script>
 	<!-- Scripts externos -->
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
 
 
 </body>
