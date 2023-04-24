@@ -82,7 +82,6 @@ btnAbrirModalModificar.onclick = function () {
   modificarPrecio.disabled = true;
   modificarKilometraje.disabled = true;
   btnModificarDatosModal.disabled = true;
-
 }
 
 btnCerrarModalModificar.onclick = function () {
@@ -327,6 +326,7 @@ btnInsertarDatosModal.onclick = function () {
     if (confirm(text) == true) {
       alert("Registro insertado");
       insertar_datos_vehiculo();
+      modalInsertar.style.display = "none";
     } else {
       text = "You canceled!";
     }
@@ -345,6 +345,8 @@ btnModificarDatosModal.onclick = function () {
     if (confirm(text) == true) {
       modificar_datos_vehiculo();
       alert("Registro modificado");
+      modalModificar.style.display = "none";
+
     } else {
       text = "You canceled!";
     }
@@ -389,6 +391,7 @@ btnEliminarDatosModal.onclick = function () {
       if (confirm(text) == true) {
         eliminar_datos_vehiculo();
         alert("Registro eliminado")
+        modalEliminar.style.display = "none";
       } else {
         text = "You canceled!";
       }
