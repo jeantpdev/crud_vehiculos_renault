@@ -159,6 +159,7 @@ nav {
 	}
 
 	.principal-formulario .principal-boton button {
+		height: 6vh;
 		width: 50vw;
 	}
 
