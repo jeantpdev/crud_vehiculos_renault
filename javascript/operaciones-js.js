@@ -1,9 +1,4 @@
-const config = {
-  headers: {
-    apikey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVsb2ZnenlobmxpdXJ3Y2hubXNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE1MDM5NTksImV4cCI6MTk5NzA3OTk1OX0.5zlT7FxiI7bD4as9wzXXKaprjKybRlUJe6Pnao_HhpI',
-    Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVsb2ZnenlobmxpdXJ3Y2hubXNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE1MDM5NTksImV4cCI6MTk5NzA3OTk1OX0.5zlT7FxiI7bD4as9wzXXKaprjKybRlUJe6Pnao_HhpI'
-  }
-}
+import config from '../supabase/keys.js';
 
 // Cuando cargue la página, se llenará automaticamente la tabla con los registros de la base de datos
 document.addEventListener('DOMContentLoaded', function () {
@@ -404,3 +399,20 @@ btnEliminarDatosModal.onclick = function () {
 btnConsultarDatosModal.onclick = function () {
   consultar_datos_vehiculo();
 }
+
+/* 
+
+    getDatosModificarVehiculo: function () {
+        const id = document.getElementById('modificar-id').value;
+        const modelo = document.getElementById('modificarModelo').value;
+        const año = document.getElementById('modificarAño').value;
+        const modificarPrecio = document.getElementById('modificar-precio').value;
+        const modificarKilometraje = document.getElementById('modificar-kilometraje').value;
+        let formato_precio = Intl.NumberFormat("de-DE");
+        let formato_kilometraje = Intl.NumberFormat("de-DE");
+        precio = formato_precio.format(modificarPrecio);
+        kilometraje = formato_kilometraje.format(modificarKilometraje);
+
+    }, 
+
+    */
